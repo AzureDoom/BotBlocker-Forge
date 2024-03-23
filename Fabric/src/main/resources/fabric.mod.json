@@ -1,0 +1,39 @@
+{
+    "schemaVersion": 1,
+    "id": "botblocker",
+    "version": "${version}",
+  
+    "name": "BotBlocker",
+    "description": "Blocks Bot attempts",
+    "authors": [
+      "AzureDoom"
+    ],
+    "contact": {
+      "homepage": "https://github.com/AzureDoom/BotBlocker-Forge",
+      "sources": "https://github.com/AzureDoom/BotBlocker-Forge"
+    },
+  
+    "license": "GPL-3.0",
+    "icon": "assets/modid/icon.png",
+  
+    "environment": "*",
+    "entrypoints": {
+      "main": [
+        "com.azuredoom.botblocker.BotBlocker"
+      ]
+    },
+    "mixins": [
+      "botblocker.mixins.json"
+    ],
+  
+    "depends": {
+      "fabricloader": ">=0.13",
+      "fabric": "*",
+      "minecraft": "1.19.2",
+      "java": ">=17"
+    },
+    "suggests": {
+      "another-mod": "*"
+    }
+  }
+  
