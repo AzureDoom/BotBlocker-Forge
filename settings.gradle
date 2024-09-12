@@ -26,20 +26,26 @@ pluginManagement {
                 includeGroup("codechicken")
             }
         }
-        maven {
-            name = 'MinecraftForge'
-            url = 'https://maven.minecraftforge.net/'
-        }
         exclusiveContent {
             forRepository {
                 maven {
-                    name = 'Sponge Snapshots'
+                    name = 'Sponge'
                     url = uri('https://repo.spongepowered.org/repository/maven-public')
                 }
             }
             filter {
-                includeGroupAndSubgroups('org.spongepowered')
-                includeGroup('net.minecraftforge')
+                includeGroupAndSubgroups("org.spongepowered")
+            }
+        }
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = 'Forge'
+                    url = uri('https://maven.minecraftforge.net')
+                }
+            }
+            filter {
+                includeGroupAndSubgroups('net.minecraftforge')
             }
         }
     }
@@ -54,3 +60,4 @@ rootProject.name = 'BlockBlocker 1.21'
 include('common')
 include('fabric')
 include('neoforge')
+include('forge')
